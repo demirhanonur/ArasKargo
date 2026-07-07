@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aras Kargo Kurumsal Müşteri Başvuru Formu</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f5f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo img {
+            height: 70px;
+            max-width: 240px;
+        }
+
+        h2 {
+            color: #d71920;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .required {
+            color: #d71920;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            box-sizing: border-box;
+            border: 1px solid #cfd6dd;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #d71920;
+            box-shadow: 0 0 0 2px rgba(215, 25, 32, 0.12);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 28px;
+            background: #d71920;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b51218;
+        }
+
+        .footer-note {
+            margin-top: 22px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                margin: 20px;
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <img src="https://storm-afcfb1758c86a5.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068J500000Hrmsy&operationContext=DELIVERY&contentId=05TJ500000rSDqM&page=0&d=/a/J5000000aufj/l9Rai4YLett3rGdeLQxSOIFRgSwJIp4A8k7DXciAvYw&oid=00DJ5000000HLfQ&dpt=null&viewId=" alt="Aras Kargo Logo">
+    </div>
+
+    <h2>Kurumsal Müşteri Başvuru Formu</h2>
+
+    <p class="subtitle">
+        Kurumsal gönderi ihtiyaçlarınız için bilgilerinizi paylaşın.
+        Satış ekibimiz en kısa sürede sizinle iletişime geçecektir.
+    </p>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DJ5000000HLfQ" method="POST">
+
+        <input type="hidden" name="oid" value="00DJ5000000HLfQ">
+        <input type="hidden" name="retURL" value="https://www.salesforce.com">
+        <input type="hidden" name="status" value="New">
+        <input type="hidden" name="lead_source" value="Website">
+
+        <!-- Debug için gerekirse açılabilir -->
+        <!--
+        <input type="hidden" name="debug" value="1">
+        <input type="hidden" name="debugEmail" value="bdurucuoz+00dj5000000hlfq@salesforce.com">
+        -->
+
+        <label for="first_name">Ad <span class="required">*</span></label>
+        <input id="first_name" maxlength="40" name="first_name" type="text" placeholder="Örn: Ali" required>
+
+        <label for="last_name">Soyad <span class="required">*</span></label>
+        <input id="last_name" maxlength="80" name="last_name" type="text" placeholder="Örn: Yılmaz" required>
+
+        <label for="company">Firma Adı <span class="required">*</span></label>
+        <input id="company" maxlength="40" name="company" type="text" placeholder="Örn: Lezzet Sepeti" required>
+
+        <label for="email">E-posta <span class="required">*</span></label>
+        <input id="email" maxlength="80" name="email" type="email" placeholder="ornek@firma.com" required>
+
+        <label for="phone">Telefon</label>
+        <input id="phone" maxlength="40" name="phone" type="tel" placeholder="Örn: 0212 000 00 00">
+
+        <label for="mobile">Cep Telefonu</label>
+        <input id="mobile" maxlength="40" name="mobile" type="tel" placeholder="Örn: 0555 000 00 00">
+
+        <label for="industry">Sektör</label>
+        <select id="industry" name="industry">
+            <option value="">-- Seçiniz --</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Apparel">Apparel</option>
+            <option value="Banking">Banking</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Chemicals">Chemicals</option>
+            <option value="Communications">Communications</option>
+            <option value="Construction">Construction</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Education">Education</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Energy">Energy</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Environmental">Environmental</option>
+            <option value="Financial Services">Financial Services</option>
+            <option value="Food &amp; Beverage">Food &amp; Beverage</option>
+            <option value="Government">Government</option>
+            <option value="Healthcare &amp; Life Sciences">Healthcare &amp; Life Sciences</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Machinery">Machinery</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Media">Media</option>
+            <option value="Not For Profit">Not For Profit</option>
+            <option value="Other">Other</option>
+            <option value="Recreation">Recreation</option>
+            <option value="Retail">Retail</option>
+            <option value="Shipping">Shipping</option>
+            <option value="Technology">Technology</option>
+            <option value="Telecommunications">Telecommunications</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Utilities">Utilities</option>
+        </select>
+
+        <label for="00NJ5000001lOyV">Aylık Gönderi Hacmi</label>
+        <input id="00NJ5000001lOyV" name="00NJ5000001lOyV" type="number" placeholder="Örn: 15000">
+
+        <label for="00NJ5000001lOya">Tahmini Aylık Hacim</label>
+        <input id="00NJ5000001lOya" name="00NJ5000001lOya" type="number" placeholder="Örn: 15000">
+
+        <label for="00NJ5000001lOyf">Tercih Edilen Servis Hattı</label>
+        <select id="00NJ5000001lOyf" name="00NJ5000001lOyf" title="Preferred Service Lane">
+            <option value="">-- Seçiniz --</option>
+            <option value="Domestic">Domestic</option>
+            <option value="International">International</option>
+            <option value="Mixed" >Mixed</option>
+        </select>
+
+        <label for="description">Açıklama</label>
+        <textarea id="description" name="description" rows="5" placeholder="Kargo, teslimat bölgesi veya özel ihtiyaçlarınızı yazabilirsiniz."></textarea>
+
+        <button type="submit">Başvuruyu Gönder</button>
+
+    </form>
+
+    <p class="footer-note">
+        Başvurunuz Aras Kargo Kurumsal Satış Ekibine iletilecektir.
+    </p>
+
+</div>
+
+</body>
+</html>
